@@ -10,7 +10,11 @@ module Demesne::Behaviours
       end
 
       def name
-        raise NotImplementedError
+        raise NotImplementedError, "Override ::name in card implementation."
+      end
+
+      def release
+        raise NotImplementedError, "Override ::release in card implementation."
       end
     end
   end

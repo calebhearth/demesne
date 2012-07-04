@@ -11,6 +11,7 @@ describe Demesne::Behaviours::CardBehaviour do
 
   it { should respond_to(:behaviours) }
   it { should respond_to(:name) }
+  it { should respond_to(:release) }
   describe "::behaviours" do
     subject { @test_card.behaviours }
     it { should eq([]) }
@@ -18,5 +19,8 @@ describe Demesne::Behaviours::CardBehaviour do
 
   describe "::name" do
     specify { lambda { @test_card.name }.should raise_error(NotImplementedError) }
+  end
+  describe "::release" do
+    specify { lambda { @test_card.release }.should raise_error(NotImplementedError) }
   end
 end
