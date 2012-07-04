@@ -8,6 +8,10 @@ module Demesne::Behaviours
       def behaviours
         []
       end
+
+      def name
+        raise NotImplementedError
+      end
     end
   end
 end
